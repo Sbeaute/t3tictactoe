@@ -1,141 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>level</title>
+<title>TicTacToe</title>
+
+<script src="public/vendor.js" type="text/javascript" charset=utf-8 defer></script>
+<script src="public/application.js" type="text/javascript" charset=utf-8 defer></script>
+
+
 </head>
+
 <body>
-<button type="button" onclick="alert('Game On!')">Start Game!</button>
-
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand">Level x2</a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
-<body class="container-fluid">
-  <h1></h1>
-
-  <p id="message"></p>
-
-  <form id="sign-up" class="border">
-    <fieldset>
-      <legend>Sign up!</legend>
-      <input type="text" name="credentials[email]" placeholder="Email">
-      <input type="password" name="credentials[password]" placeholder="Password">
-      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-      <input type="submit" value="Sign up!">
-    </fieldset>
-  </form>
-
-  <form id="sign-in" class="border">
-    <fieldset>
-      <legend>Sign in!</legend>
-      <input type="text" name="credentials[email]" placeholder="Email">
-      <input type="password" name="credentials[password]" placeholder="Password">
-      <input type="submit" value="Sign in!">
-    </fieldset>
-  </form>
-
-  <form id="sign-out" class="border">
-    <fieldset>
-      <legend>Sign Out!</legend>
-      <input type="submit" value="Sign out!">
-    </fieldset>
-  </form>
 <h1>T3</h1>
-<h2>Tic Tac Toe </h2>
+<h2>Tic Tac Toe</h2>
+<h2>Instructions</h2>
 <p>The object of Tic Tac Toe is to get three in a row. You play on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled. X always goes first, and in the event that no one has three in a row, the stalemate is called a cat game.</p>
-<div class = " container text-center">
-  <a class = "btn btn-primary" id ="turnX">Turn X </a>
-  <a class = "btn btn-secondary" id ="turnO">Turn O </a>
-  <div class ="row">
-  <div class = "col-md-6">
-<a class = "btn btn-primary tic" id ="0">#</a>
-<a class = "btn btn-primary tic" id ="1">#</a>
-<a class = "btn btn-primary tic" id ="2">#</a>
-</div>
-</div>
-<div class = "row">
-<div class = "col-md-6">
-<a class="btn btn-primary tic" id ="3">#</a>
-<a class="btn btn-primary tic" id ="4">#</a>
-<a class="btn btn-primary tic" id ="5">#</a>
-</div>
-</div>
-<div class ="row">
- <div class = "col-md-6">
-<a class="btn btn-primary tic" id ="6">#</a>
-<a class="btn btn-primary tic" id ="7">#</a>
-<a class="btn btn-primary tic" id ="8">#</a>
-</div>
-</div>
-</div>
-
-<style>
-h1 {
-    color: white;
-    text-align: center;
-    font-size: 60px;
-    }
-    h2 {
-    text-align: center;
-    font-size: 50px;
-    }
-
-    p {
-    font-size: 30px;
-    }
-    body {
-      background-color: black:inherit;
-    }
-    .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #2196F3;
-  padding: 40px;
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 40px;
-  font-size: 30px;
-  text-align: center;
-}
-
-    </style>
+<div class="container text-center">
+  <a class="btn btn-primary" id="turnX">TurnX</a>
+  <a class="btn btn-primary" id="turnO">TurnO</a>
+ <div class="row">
+   <div class="col-md-6">
+     <a class="btn btn-primary tic" id="0">#</a>
+     <a class="btn btn-primary tic" id="1">#</a>
+     <a class="btn btn-primary tic" id="2">#</a>
+  </div> <div class="col-md-6">
+     <a class="btn btn-primary tic" id="3">#</a>
+     <a class="btn btn-primary tic" id="4">#</a>
+     <a class="btn btn-primary tic" id="5">#</a>
+  </div> <div class="col-md-6">
+     <a class="btn btn-primary tic" id="6">#</a>
+     <a class="btn btn-primary tic" id="7">#</a>
+     <a class="btn btn-primary tic" id="8">#</a>
+  </div>
 </body>
-//</html>
-
-
-<div class = " container text-center">
-  <a class = "btn btn-primary" id ="turnX">Turn X </a>
-  <a class = "btn btn-secondary" id ="turnO">Turn O </a>
-  <div class ="row">
-  <div class = "col-md-6">
-<a class = "btn btn-primary tic" id ="0">#</a>
-<a class = "btn btn-primary tic" id ="1">#</a>
-<a class = "btn btn-primary tic" id ="2">#</a>
-</div>
-</div>
-<div class = "row">
-<div class = "col-md-6">
-<a class="btn btn-primary tic" id ="3">#</a>
-<a class="btn btn-primary tic" id ="4">#</a>
-<a class="btn btn-primary tic" id ="5">#</a>
-<div class = "row">
-</div>
- <div class = "col-md-6">
-<a class="btn btn-primary tic" id ="6">#</a>
-<a class="btn btn-primary tic" id ="7">#</a>
-<a class="btn btn-primary tic" id ="8">#</a>
-</div>
-</div>
-</div>
-
-
-
-<Style>
-body {
-  background-color: black:inherit;
-}
+</html>

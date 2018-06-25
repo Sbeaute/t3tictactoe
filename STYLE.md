@@ -14,3 +14,24 @@ wiki features.
 Please refrain from using HTML inside markdown files, as a rule. Sometimes,
 using HTML is the only way to accomplish something, like including an image with
 a custom width attribute.
+
+
+
+
+//<!DOCTYPE html>
+<html>
+    <head>
+      <title>T3</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>T3tictactoe</h1>
+    </body>
+</html>

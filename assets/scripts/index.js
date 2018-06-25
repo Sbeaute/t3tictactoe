@@ -10,20 +10,19 @@ $(() => {
   // your JS code goes here
 })
 
-
-$(document).ready(function() {
+$(document).ready(function () {
 // Default player's turn to x
-  var turn = "X"
+let turn = "X"
 // Array stores value that we will check later for a winner
-var turns = ["#", "#", "#", "#", "#", "#", "#", "#" ,"#"];
+let turns = ["#", "#", "#", "#", "#", "#", "#", "#" ,"#"];
 // defualt players turn
-var computersTurn="O";
+let computersTurn="O";
 //keeps track if it is player's turn
-var gameOn = false;
+let gameOn = false;
 //keeps track of players turn so no loop
-var count =0;
+let count =0;
 // changes player1 turn to x and player2 to O
-$('#turnX').click(function(){
+$('#turnX').click(function() {
   turn ="O";
   computersTurn="X";
   $("#turnX").removeClass("btn-primary");
@@ -39,13 +38,13 @@ $("turnX").addClass("btn-primary");
 reset ();
 });
 // writing function for players turn
-function computerTurn() {
+function computersTurn() {
   //used to break while loop
-  var taken =false;
+  let taken =false;
   while(taken===false && count !==5){
     //generate players random turn
-    var computersMove= (math.random()*10).tofixed();
-    var move= $("#"+computersMove).text();
+    let computersMove= (math.random()*10).tofixed();
+    let move= $("#"+computersMove).text();
     if (move==="#"){
       $("#"+computersMove).text(computersTurn);
       taken=true;
@@ -55,7 +54,7 @@ function computerTurn() {
 }
 
 function playerTurn(turn,id) {
-  var spotTaken= $("#"+id).text();
+  let spotTaken= $("#"+id).text();
   if(spotTaken==="#"){
     count ++;
     $("#"+id).text(turn);
@@ -63,7 +62,7 @@ function playerTurn(turn,id) {
     winCondition(turns,turn);
     if(gameOn === false){
       computersTurn();
-      winCondition(turns,computersTurn);
+      winConditions(turns,computersTurn);
     }
   }
 }
@@ -96,7 +95,7 @@ alert ("Player" + currentTurn + " wins! (2nd row down 1,4, and 7 spots)");
 else if (turnArray[2] === currentTurn && turnArray[5]===currentTurn && turnArray [8] === currentTurn) {
 gameOn = true;
 reset();
-alert ("Player" + currenTurn + " wins! (3rd row down 2,5, and 8 spots)");
+alert ("Player" + currentTurn + " wins! (3rd row down 2,5, and 8 spots)");
 }
 else if (turnArray[3] === currentTurn && turnArray[4]===currentTurn && turnArray [5] === currentTurn) {
 gameOn = true;
@@ -119,7 +118,7 @@ else {
 }
 
 $(".tic").click(function(){
-  var slot =$(this).attr('id');
+  let slot =$(this).attr('id');
 playerTurn (turn,slot);
 
 });
