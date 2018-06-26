@@ -11,34 +11,38 @@ $(() => {
 })
 
 $(document).ready(function () {
-// Default player's turn to x
-let turn = "X"
-// Array stores value that we will check later for a winner
+// Default player 1 turn to x
+let player1 = "X"
+// Array stores value that check later for a winner
 let turns = ["#", "#", "#", "#", "#", "#", "#", "#" ,"#"];
-// defualt players turn
-let computersTurn="O";
-//keeps track if it is player's turn
+// defualt players 2 turn
+let player2= "O"
+//keeps track if it is player 2 turn
 let gameOn = false;
 //keeps track of players turn so no loop
 let count =0;
 // changes player1 turn to x and player2 to O
-$('#turnX').click(function() {
-  turn ="O";
-  computersTurn="X";
+$('#turnX').click(function () {
+    player2 ="O";
+    player1 ="X";
   $("#turnX").removeClass("btn-primary");
 $("turnO").addClass("btn-primary");
 reset ();
 });
 // changes player2 turn to o and player1 to x
 $("#turnO").click(function(){
-  turn ="X";
-  player1Turn="O";
+  player1 ="X";
+  player2 ="O";
   $("#turnO").removeClass("btn-primary");
 $("turnX").addClass("btn-primary");
 reset ();
 });
+//$(".tic").click(function()){
+//var slot = $(this).attr('id');
+//player turn (turn,slot);
+}
 // writing function for players turn
-function computersTurn() {
+function player1Turn() {
   //used to break while loop
   let taken =false;
   while(taken===false && count !==5){
@@ -102,10 +106,10 @@ gameOn = true;
 reset();
 alert ("Player" + currentTurn + " wins! (Mid row across 3,4, and 5 spots)");
 }
-else if (turnArray[2] === currentTurn && turnArray[4]===currenTurn && turnArray [6] === currentTurn) {
+else if (turnArray[2] === currentTurn && turnArray[4]===currentTurn && turnArray [6] === currentTurn) {
 gameOn = true;
 reset();
-alert ("Player" + currenTurn + " wins! (3rd row across 2,4, and 6 spots)");
+alert ("Player" + currentTurn + " wins! (3rd row across 2,4, and 6 spots)");
 }
 else if (turnArray[6] === currentTurn && turnArray[7]===currentTurn && turnArray [8] === currentTurn) {
 gameOn = true;
