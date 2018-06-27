@@ -2,11 +2,11 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 
-body{
-    background-color: black;
+body {
+      background-color: black;
   }
   p{
-    text-color:white;
+    text-color: white;
   }
   h1 {
     color: white;
@@ -22,12 +22,12 @@ body{
   font-size: 30px;
   }
   .tic {
-  padding:45px !important;
+  padding: 45px !important;
   font-size: 25px;
   margin:10px;
   }
   .border {
   border: 3px solid #000;
   margin: 20px;
-  padding:20px;
+  padding: 20px;
   }
