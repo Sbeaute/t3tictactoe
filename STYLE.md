@@ -15,23 +15,20 @@ Please refrain from using HTML inside markdown files, as a rule. Sometimes,
 using HTML is the only way to accomplish something, like including an image with
 a custom width attribute.
 
+$(document).ready(function(){
+let turns'X'
+let turns = ['#', '#', '#', '#', '#', '#', '#', '#', '#']
 
+let computersTurn = o
 
-
-//<!DOCTYPE html>
-<html>
-    <head>
-      <title>T3</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>T3tictactoe</h1>
-    </body>
-</html>
+let gameOn = false
+//change players turn to x and computer to o
+$('#turnX').click(function(){
+turn = o
+computersTurn = x
+$('#turnx').removeClass('btn-primary')
+$("#turno").addClass('btn-primary')
+}));
+$('#turnO').removeClass('btn-primary')
+$("#turnX").addClass('btn-primary')
+})
