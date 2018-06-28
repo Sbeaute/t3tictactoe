@@ -14,21 +14,3 @@ wiki features.
 Please refrain from using HTML inside markdown files, as a rule. Sometimes,
 using HTML is the only way to accomplish something, like including an image with
 a custom width attribute.
-
-$(document).ready(function(){
-let turns'X'
-let turns = ['#', '#', '#', '#', '#', '#', '#', '#', '#']
-
-let computersTurn = o
-
-let gameOn = false
-//change players turn to x and computer to o
-$('#turnX').click(function(){
-turn = o
-computersTurn = x
-$('#turnx').removeClass('btn-primary')
-$("#turno").addClass('btn-primary')
-}));
-$('#turnO').removeClass('btn-primary')
-$("#turnX").addClass('btn-primary')
-})
