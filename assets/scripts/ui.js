@@ -18,7 +18,7 @@ const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').css('background-color', 'green')
   console.log('signInSuccess ran. Data is :', data)
-  store.user = data.user
+  //store.user = data.user
 }
 
 const signInFailure = function (error) {
