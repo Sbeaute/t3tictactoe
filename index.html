@@ -5,70 +5,39 @@
 
 <script src="public/vendor.js" type="text/javascript" charset=utf-8 defer></script>
 <script src="public/application.js" type="text/javascript" charset=utf-8 defer></script>
-
-
 </head>
-
 <body>
-
-  <a href="https://imgur.com/pPjrKHN"><img src="https://i.imgur.com/pPjrKHN.gif" title="source: imgur.com" /></a>
-  <button id="show-board" type="button">Show board</button>
-  <div id="board"></div>
-  <form id="sign-up" class="border">
-        <fieldset>
-          <legend>Sign up!</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-          <input type="submit" value="Sign up!">
-        </fieldset>
-      </form>
-
-      <form id="sign-in" class="border">
-        <fieldset>
-          <legend>Sign in!</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="submit" value="Sign in!">
-        </fieldset>
-      </form>
-
-      <form id="sign-out" class="border">
-        <fieldset>
-          <legend>Sign Out!</legend>
-          <input type="submit" value="Sign out!">
-        </fieldset>
-      </form>
+  <div class = " container text-center">
+    <a class = "btn btn-primary" id ="turnX">Turn X </a>
+    <a class = "btn btn-secondary" id ="turnO">Turn O </a>
+    <div class= "centergame">
+    <div class ="row">
+    <div class = "col-md-6">
+  <a class = "btn btn-primary tic" id ="0">#</a>
+  <a class = "btn btn-primary tic" id ="1">#</a>
+  <a class = "btn btn-primary tic" id ="2">#</a>
+  </div>
+  </div>
+  <div class = "row">
+  <div class = "col-md-6">
+  <a class="btn btn-primary tic" id ="3">#</a>
+  <a class="btn btn-primary tic" id ="4">#</a>
+  <a class="btn btn-primary tic" id ="5">#</a>
+  </div>
+  </div>
+  <div class ="row">
+   <div class = "col-md-6">
+  <a class="btn btn-primary tic" id ="6">#</a>
+  <a class="btn btn-primary tic" id ="7">#</a>
+  <a class="btn btn-primary tic" id ="8">#</a>
+  </div>
+  </div>
+  </div>
+</div>
 <h1>T3</h1>
 <h2>Tic Tac Toe</h2>
 <h2>Instructions</h2>
 <p>The object of Tic Tac Toe is to get three in a row. You play on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled. X always goes first, and in the event that no one has three in a row, the stalemate is called a cat game.</p>
-<div class="container text-center">
-  <a class="btn btn-primary" id="turnX">turnX</a>
-  <a class="btn btn-secondary" id="turnO">turnO</a>
-</div>
-<div id="gameboard">
-   <div class="row">
-     <div class="col-md-6">
-       <a class="btn btn-primary tic" id="0">#</a>
-       <a class="btn btn-primary tic" id="1">#</a>
-       <a class="btn btn-primary tic" id="2">#</a>
-    </div>
-  </div>
-    <div class="row">
-      <div class="col-md-6">
-         <a class="btn btn-primary tic" id="3">#</a>
-         <a class="btn btn-primary tic" id="4">#</a>
-         <a class="btn btn-primary tic" id="5">#</a>
-      </div>
-    </div>
-    <div class="row">
-    <div class="col-md-6">
-       <a class="btn btn-primary tic" id="6">#</a>
-       <a class="btn btn-primary tic" id="7">#</a>
-       <a class="btn btn-primary tic" id="8">#</a>
-    </div>
-  </div>
-</div>
+
 </body>
 </html>

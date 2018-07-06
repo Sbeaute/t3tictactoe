@@ -1,26 +1,29 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-@font-face {
-  font-family: 'pixelfont';
-  src: url('');https://www.dafont.com/staxblox.font
-}
+//@font-face {
+  //font-family: 'pixelfont';
+  //src: url'https://www.dafont.com/staxblox.font')
+//}
 
 body {
-background-image:url("https://i.imgur.com/pPjrKHN.gif");
+margin:0px auto;
 }
-
 p{
   text-color: white;
 }
-
+.centergame {
+  margin: 0 auto;
+}
 
 h1 {
   color: white;
   text-align: center;
   font-size: 60px;
   }
-
+  h2 {
+ background-image:url("https://i.imgur.com/pPjrKHN.gif");
+  }
 h2 {
 text-align: center;
 font-size: 50px;
@@ -34,9 +37,14 @@ font-size: 30px;
 .tic {
 padding: 45px !important;
 font-size: 25px;
-margin:10px;
+margin:10px auto;
 }
 
+//.tic:hover {
+  //background-color: ;
+  //opacity: ;
+  //filter: alpha (opacity=70);
+//}
 .border {
 border: 3px solid #000;
 margin: 20px;

@@ -13,39 +13,43 @@ $(() => {
 })
 
 $(document).ready(function () {
-// Default player1 turn to X
+  // Default player1 turn to X
   let turn = 'X'
   // the array that will check later for winner
   let turns = ['#', '#', '#', '#', '#', '#', '#', '#', '#']
   // player2 turn
-  let computersTurn = 'O'
+  const turn2 = 'O'
   // keep track of player1 and player 2 turn so no loops
   let count = 0
   // keeps track if it is the computers turn
   let gameOn = false
   // changes players turn to X and computer to O
-  $('#turnX').click(function () {
-    turn = 'O'
-    computersTurn = 'X'
-    $('#turnX').removeClass('btn-primary')
-    $('#turnO').addClass('btn-primary')
-    $('.tic').text('#')
-    reset()
-  })
-  $('#turnO').click(function () {
-    turn = 'X'
-    computersTurn = 'O'
-    $('#turnO').removeClass('btn-primary')
-    $('#turnX').addClass('btn-primary')
-    $('.tic').text('#')
-    reset()
-  })
+  //$('#turnX').click(function () {
+    //turn = 'O'
+    // currentTurn = 'X'
+    //$('#turnX').removeClass('btn-primary')
+    //$('#turnO').addClass('btn-primary')
+    //$('.tic').text('#')
+    //count++
+    //reset()
+  //})
+
+  //$('#turnO').click(function () {
+    //turn = 'X'
+    // currentTurn = 'O'
+    //$('#turnO').removeClass('btn-primary')
+    //$('#turnX').addClass('btn-primary')
+    //$('.tic').text('#')
+    //count++
+    //reset()
+  //})
+
   $('#player2').click(function () {
     alert('hello')
-  });
+  })
   $('.tic').click(function () {
     const slot = $(this).attr('id')
-    playerTurn(turn, slot)
+    playerTurn(slot)
   })
 
   function reset () {
@@ -54,35 +58,49 @@ $(document).ready(function () {
     $('.tic').text('#')
     gameOn = false
   }
-  // insert function computer under This
-  function computerTurn () {
-    // break loop
-    let taken = false
-    while (taken === false && count !== 5) {
-      // generte random turn
-      const computersMove = (Math.random() * 10).toFixed()
-      const move = $('#' + computersMove).text()
-      if (move === '#') {
-        $('#' + computersMove).text(computersTurn)
-        taken = true
-        turns[computersMove] = computersTurn
 
-    }
-  }
-
-  function playerTurn (turn, id) {
+  function playerTurn (id) {
     const spotTaken = $('#' + id).text()
     if (spotTaken === '#') {
       count++
       turns[id] = turn
-      $('#', id).text(turn)
+      // this is where the turn goes out to the bo
+      $('#' + id).text(turn)
+      // switch from player 1 x to player 2
+//alternate turns from x and o
+      if (turn === 'X') {
+// this changes the value of X to O
+        turn = 'O'
+      } else {
+        // changes the O into xX
+        turn = 'X'
+      }
       winCondition(turns, turn)
       if (gameOn === false) {
-        computerTurn()
-        winCondition(turns, computersTurn)
+        //alternateTurn()
+        //winCondition(turns, computersTurn)
       }
     }
   }
+  function currentTurn (turn, id) {
+    const spotTaken = $('#' + id).text()
+    if (spotTaken === '#') {
+      count++
+      turns[id] = turn
+      $('#' + id).text(turn)
+      winCondition(turns, turn)
+      if (gameOn === false) {
+        playerTurn()
+        winCondition(turns, computersTurn)
+      alternateTurn (currentTurns + id )
+      }
+    }
+  }
+  //need to know the box it is looking for when click
+  // it going to be able to use the box putting x and o
+function alternateTurn () {
+  console.log ('testing')
+}
 
   function winCondition (turnArray, currentTurn) {
     if (turnArray[0] === currentTurn && turnArray[1] === currentTurn && turnArray[2] === currentTurn) {
