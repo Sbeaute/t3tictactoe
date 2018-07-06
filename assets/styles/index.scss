@@ -1,13 +1,14 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-
-//@font-face {
-  //font-family: 'pixelfont';
-  //src: url'https://www.dafont.com/staxblox.font')
-//}
+// @fontfaceurl'https://www.dafont.com/staxblox.font'
+@font-face {
+  font-family: 'pixelfont';
+  src: url('./pixelfont.ttf');
+}
 
 body {
 margin:0px auto;
+font-family: 'pixelfont';
 }
 p{
   text-color: white;
