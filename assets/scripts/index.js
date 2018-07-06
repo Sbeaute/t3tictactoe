@@ -24,25 +24,25 @@ $(document).ready(function () {
   // keeps track if it is the computers turn
   let gameOn = false
   // changes players turn to X and computer to O
-  //$('#turnX').click(function () {
-    //turn = 'O'
-    // currentTurn = 'X'
-    //$('#turnX').removeClass('btn-primary')
-    //$('#turnO').addClass('btn-primary')
-    //$('.tic').text('#')
-    //count++
-    //reset()
-  //})
+  // $('#turnX').click(function () {
+  // turn = 'O'
+  // currentTurn = 'X'
+  // $('#turnX').removeClass('btn-primary')
+  // $('#turnO').addClass('btn-primary')
+  // $('.tic').text('#')
+  // count++
+  // reset()
+  // })
 
-  //$('#turnO').click(function () {
-    //turn = 'X'
-    // currentTurn = 'O'
-    //$('#turnO').removeClass('btn-primary')
-    //$('#turnX').addClass('btn-primary')
-    //$('.tic').text('#')
-    //count++
-    //reset()
-  //})
+  // $('#turnO').click(function () {
+  // turn = 'X'
+  // currentTurn = 'O'
+  // $( '#turnO').removeClass('btn-primary')
+  // $('#turnX').addClass('btn-primary')
+  // $('.tic').text('#')
+  // count++
+  // reset()
+  // })
 
   $('#player2').click(function () {
     alert('hello')
@@ -57,6 +57,7 @@ $(document).ready(function () {
     count = 0
     $('.tic').text('#')
     gameOn = false
+    $('#container input').val(' ')
   }
 
   function playerTurn (id) {
@@ -67,9 +68,9 @@ $(document).ready(function () {
       // this is where the turn goes out to the bo
       $('#' + id).text(turn)
       // switch from player 1 x to player 2
-//alternate turns from x and o
+      // alternate turns from x and o
       if (turn === 'X') {
-// this changes the value of X to O
+        // this changes the value of X to O
         turn = 'O'
       } else {
         // changes the O into xX
@@ -77,8 +78,8 @@ $(document).ready(function () {
       }
       winCondition(turns, turn)
       if (gameOn === false) {
-        //alternateTurn()
-        //winCondition(turns, computersTurn)
+        // alternateTurn()
+        // winCondition(turns, computersTurn)
       }
     }
   }
@@ -92,15 +93,15 @@ $(document).ready(function () {
       if (gameOn === false) {
         playerTurn()
         winCondition(turns, computersTurn)
-      alternateTurn (currentTurns + id )
+        alternateTurn (currentTurns + id )
       }
     }
   }
-  //need to know the box it is looking for when click
+  // need to know the box it is looking for when click
   // it going to be able to use the box putting x and o
 function alternateTurn () {
-  console.log ('testing')
-}
+    console.log('testing')
+  }
 
   function winCondition (turnArray, currentTurn) {
     if (turnArray[0] === currentTurn && turnArray[1] === currentTurn && turnArray[2] === currentTurn) {
