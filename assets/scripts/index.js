@@ -93,7 +93,7 @@ $(document).ready(function () {
       if (gameOn === false) {
         playerTurn()
         winCondition(turns, computersTurn)
-        alternateTurn (currentTurns + id )
+        alternateTurn(currentTurns + id )
       }
     }
   }

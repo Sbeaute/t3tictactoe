@@ -6,6 +6,7 @@ const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
   $('#message').css('background-color', 'green')
   console.log('signUpSuccess ran. Data is :', data)
+    $('#sign-up').css('display', 'none')
 }
 
 const signUpFailure = function (error) {
@@ -15,8 +16,12 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Signed in successfully')
-  $('#message').css('background-color', 'green')
+  //$('#message').text('Signed in successfully')
+  //$('#message').css('background-color', 'green')
+  $('.modal-body').html('')
+  $('myModalLabel').html('loggedin')
+  $('#myModal').modal('show')
+  $('#sign-in').css('display', 'none')
   console.log('signInSuccess ran. Data is :', data)
   //store.user = data.user
 }
@@ -31,6 +36,7 @@ const signOutSuccess = function () {
   $('#message').text('Signed out successfully')
   $('#message').css('background-color', 'green')
   console.log('signOutSuccess ran and nothing was returned!')
+    $('#sign-Out').css('display', 'none')
   store.user = null
 }
 
