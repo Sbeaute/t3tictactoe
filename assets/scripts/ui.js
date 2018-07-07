@@ -6,7 +6,7 @@ const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
   $('#message').css('background-color', 'green')
   console.log('signUpSuccess ran. Data is :', data)
-    $('#sign-up').css('display', 'none')
+  $('#sign-up').css('display', 'none')
 }
 
 const signUpFailure = function (error) {
@@ -36,7 +36,7 @@ const signOutSuccess = function () {
   $('#message').text('Signed out successfully')
   $('#message').css('background-color', 'green')
   console.log('signOutSuccess ran and nothing was returned!')
-    $('#sign-Out').css('display', 'none')
+  $('#sign-Out').css('display', 'none')
   store.user = null
 }
 
