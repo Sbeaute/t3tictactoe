@@ -60,6 +60,15 @@ const addHandlers = () => {
   //$('#show-board').on('click', renderBoard)
 }
 
+const ongetgames = function (event) {
+  event.preventDefault()
+  console.log('get games ran')
+  api.getgames()
+    .then(ui.ongetgamessuccess)
+    .catch(ui.ongetgamesfailure)
+}
+
+
 module.exports = {
   addHandlers
 }
