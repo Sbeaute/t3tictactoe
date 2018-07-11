@@ -67,8 +67,6 @@ const ongetgames = function (event) {
     .then(ui.ongetgamessuccess)
     .catch(ui.ongetgamesfailure)
 }
-
-
 module.exports = {
   addHandlers
 }
