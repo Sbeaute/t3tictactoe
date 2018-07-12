@@ -6,7 +6,9 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   font-family: 'pixelfont';
   src: url('./pixelfont.ttf');
 }
-
+.hidden{
+  display: none;
+}
 body {
 margin:0px auto;
 font-family: 'pixelfont';
