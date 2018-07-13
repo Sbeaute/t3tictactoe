@@ -57,7 +57,8 @@ const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
-  //$('#show-board').on('click', renderBoard)
+  $('#start').on('click', oncreategame)
+  // $('#show-board').on('click', renderBoard)
 }
 
 const ongetgames = function (event) {
@@ -66,6 +67,13 @@ const ongetgames = function (event) {
   api.getgames()
     .then(ui.ongetgamessuccess)
     .catch(ui.ongetgamesfailure)
+}
+const oncreategame = function (event) {
+  event.preventDefault()
+  console.log('on games ran')
+  api.creategame()
+    .then(ui.creategameSuccess)
+    .catch(ui.creategamesfailure)
 }
 module.exports = {
   addHandlers

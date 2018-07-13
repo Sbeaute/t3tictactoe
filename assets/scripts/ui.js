@@ -23,6 +23,7 @@ const signInSuccess = function (data) {
   $('#myModal').modal('show')
   $('#sign-in').css('display', 'none')
   console.log('signInSuccess ran. Data is :', data)
+  $('#start').css('display', 'block')
   //store.user = data.user
 }
 
@@ -46,11 +47,18 @@ const signOutFailure = function (error) {
   console.error('signOutFailure ran. Error is :', error)
 }
 
+const creategameSuccess = function (data) {
+  console.log('creategameSuccess ran. Data is :', data)
+  store.game = data.game
+  store.game.id = data.game.id
+  $('#gameboard').css('display', 'block')
+}
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  creategameSuccess
 }
