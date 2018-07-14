@@ -21,6 +21,7 @@ const signInSuccess = function (data) {
   $('.modal-body').html('')
   $('myModalLabel').html('loggedin')
   $('#myModal').modal('show')
+  $('#sign-in').css('display', '')
   $('#sign-in').css('display', 'none')
   console.log('signInSuccess ran. Data is :', data)
   $('#start').css('display', 'block')
