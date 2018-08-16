@@ -29,7 +29,7 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  //console.log('sign in ran!')
+  // console.log('sign in ran!')
 
   const data = getFormFields(this)
   api.signIn(data)
@@ -58,6 +58,9 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#start').on('click', oncreategame)
+  $('#ongetgames').on('submit', ongetgames)
+  $('#ondeletegame').on('submit', ondeletegame)
+  $('#onupdategame').on('submit', onupdategame)
   // $('#show-board').on('click', renderBoard)
 }
 
@@ -74,6 +77,20 @@ const oncreategame = function (event) {
   api.creategame()
     .then(ui.creategameSuccess)
     .catch(ui.creategamesfailure)
+}
+const ondeletegame = function (event) {
+  event.preventDefault()
+  console.log('delete games ran')
+  api.deletegame()
+    .then(ui.ondeletegameSuccess)
+    .catch(ui.ondeletegameFailure)
+}
+const onupdategame = function (event) {
+  event.preventDefault()
+  console.log('delete games ran')
+  api.deletegame()
+    .then(ui.deletegameSuccess)
+    .catch(ui.updategamefailure)
 }
 module.exports = {
   addHandlers

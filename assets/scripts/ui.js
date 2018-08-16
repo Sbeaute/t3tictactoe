@@ -54,6 +54,16 @@ const creategameSuccess = function (data) {
   store.game.id = data.game.id
   $('#gameboard').css('display', 'block')
 }
+const getgamesSuccess = function (data) {
+  console.log('getgamessuccess ran. Data is :', data)
+  store.game = data.game
+  store.game.id = data.game.id
+}
+const deletegameSuccess = function (data) {
+  console.log('deletegameSuccess ran. Data is :', data)
+  store.game = data.game
+  store.game.id = data.game.id
+}
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -61,5 +71,7 @@ module.exports = {
   signInFailure,
   signOutSuccess,
   signOutFailure,
-  creategameSuccess
+  creategameSuccess,
+  getgamesSuccess,
+  deletegameSuccess
 }
