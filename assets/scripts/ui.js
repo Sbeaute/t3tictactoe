@@ -16,10 +16,10 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
-  //$('#message').text('Signed in successfully')
-  //$('#message').css('background-color', 'green')
-  $('.modal-body').html('')
-  $('myModalLabel').html('loggedin')
+  // $('#message').text('Signed in successfully')
+  // $('#message').css('background-color', 'green')
+  $('.modal-body').html('You have sign in ready player 1')
+  $('#myModalLabel').html('Sign In')
   $('#myModal').modal('show')
   $('#sign-in').css('display', '')
   $('#sign-in').css('display', 'none')
