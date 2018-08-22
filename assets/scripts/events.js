@@ -47,7 +47,7 @@ const onSignOut = function (event) {
 
   api.signOut()
     .then(() => {
-      ui.signOutSuccess
+      ui.signOutSuccess()
       store.user = null
     })
     .catch(ui.signOutFailure)
@@ -59,8 +59,8 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#start').on('click', oncreategame)
   $('#ongetgames').on('submit', ongetgames)
-  $('#ondeletegame').on('submit', ondeletegame)
-  $('#onupdategame').on('submit', onupdategame)
+  // $('#ondeletegame').on('submit', ondeletegame)
+  // $('#onupdategame').on('submit', onupdategame)
   // $('#show-board').on('click', renderBoard)
 }
 
@@ -78,20 +78,22 @@ const oncreategame = function (event) {
     .then(ui.creategameSuccess)
     .catch(ui.creategamesfailure)
 }
-const ondeletegame = function (event) {
-  event.preventDefault()
-  console.log('delete games ran')
-  api.deletegame()
-    .then(ui.ondeletegameSuccess)
-    .catch(ui.ondeletegameFailure)
-}
+// const ondeletegame = function (event) {
+//   event.preventDefault()
+//   console.log('delete games ran')
+//   api.deletegame()
+//     .then(ui.ondeletegameSuccess)
+//     .catch(ui.ondeletegameFailure)
+// }
 const onupdategame = function (event) {
   event.preventDefault()
-  console.log('delete games ran')
-  api.deletegame()
-    .then(ui.deletegameSuccess)
-    .catch(ui.updategamefailure)
+  console.log('update games ran')
+  console.log(event)
+  api.updategame(id, index, value, over)
+    .then(ui.updategameSuccess)
+    .catch(ui.updategameFailure)
 }
 module.exports = {
-  addHandlers
+  addHandlers,
+  onupdategame
 }

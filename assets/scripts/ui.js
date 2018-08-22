@@ -7,6 +7,7 @@ const signUpSuccess = function (data) {
   $('#message').css('background-color', 'green')
   console.log('signUpSuccess ran. Data is :', data)
   $('#sign-up').css('display', 'none')
+  $('#message').hide(4000)
 }
 
 const signUpFailure = function (error) {
@@ -25,7 +26,8 @@ const signInSuccess = function (data) {
   $('#sign-in').css('display', 'none')
   console.log('signInSuccess ran. Data is :', data)
   $('#start').css('display', 'block')
-  //store.user = data.user
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
 const signInFailure = function (error) {
@@ -59,9 +61,14 @@ const getgamesSuccess = function (data) {
   store.game = data.game
   store.game.id = data.game.id
 }
-const deletegameSuccess = function (data) {
-  console.log('deletegameSuccess ran. Data is :', data)
-  store.game = data.game
+// const deletegameSuccess = function (data) {
+//   console.log('deletegameSuccess ran. Data is :', data)
+//   store.game = data.game
+//   store.game.id = data.game.id
+// }
+const updategamesSuccess = function (data) {
+  console.log('updategamesSuccess ran. Data is :', data)
+  store.game = data.games
   store.game.id = data.game.id
 }
 module.exports = {
@@ -73,5 +80,6 @@ module.exports = {
   signOutFailure,
   creategameSuccess,
   getgamesSuccess,
-  deletegameSuccess
+  // deletegameSuccess,
+  updategamesSuccess
 }

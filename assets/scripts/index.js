@@ -47,9 +47,10 @@ $(document).ready(function () {
   $('#player2').click(function () {
     alert('hello')
   })
-  $('.tic').click(function () {
+  $('.tic').click(function (event) {
     const slot = $(this).attr('id')
     playerTurn(slot)
+    events.onupdategame(event)
   })
 
   function reset () {
