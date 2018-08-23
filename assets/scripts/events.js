@@ -88,8 +88,10 @@ const oncreategame = function (event) {
 const onupdategame = function (event) {
   event.preventDefault()
   console.log('update games ran')
+  const data = getFormFields(this)
   console.log(event)
-  api.updategame(id, index, value, over)
+
+  api.updategame(event.target.id, index, event.target.text, over)
     .then(ui.updategameSuccess)
     .catch(ui.updategameFailure)
 }

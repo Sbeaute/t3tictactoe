@@ -41,6 +41,7 @@ const signOutSuccess = function () {
   $('#message').css('background-color', 'green')
   console.log('signOutSuccess ran and nothing was returned!')
   $('#sign-Out').css('display', 'none')
+  $('.modal-body').html('You have sign out')
   store.user = null
 }
 
@@ -55,6 +56,9 @@ const creategameSuccess = function (data) {
   store.game = data.game
   store.game.id = data.game.id
   $('#gameboard').css('display', 'block')
+  $('#myModalLabel').html('creategameSuccess')
+  $('#myModal').modal('show')
+  $('.modal-body').html('You have create a game')
 }
 const getgamesSuccess = function (data) {
   console.log('getgamessuccess ran. Data is :', data)
