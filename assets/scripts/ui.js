@@ -26,8 +26,8 @@ const signInSuccess = function (data) {
   $('#sign-in').css('display', 'none')
   console.log('signInSuccess ran. Data is :', data)
   $('#start').css('display', 'block')
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
 }
 
 const signInFailure = function (error) {
@@ -42,6 +42,7 @@ const signOutSuccess = function () {
   console.log('signOutSuccess ran and nothing was returned!')
   $('#sign-Out').css('display', 'none')
   $('.modal-body').html('You have sign out')
+  $('#message').hide(4000)
   store.user = null
 }
 
@@ -74,6 +75,9 @@ const updategamesSuccess = function (data) {
   console.log('updategamesSuccess ran. Data is :', data)
   store.game = data.games
   store.game.id = data.game.id
+  $('#myModalLabel').html('updategameSuccess')
+  $('#myModal').modal('show')
+  $('.modal-body').html('You have update a game')
 }
 module.exports = {
   signUpSuccess,

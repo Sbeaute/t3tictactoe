@@ -59,9 +59,9 @@ const getgames = function () {
 //     }
 //   })
 // }
-const updategames = function (data) {
+const updategames = function (squareVal, squareId, over) {
   return $.ajax({
-    url: config.apiUrl + `/games/${data.id}`,
+    url: config.apiUrl + `/games/` + store.game.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -69,10 +69,10 @@ const updategames = function (data) {
     data: {
       'game': {
         'cell': {
-          'index': data.index,
-          'value': data.value
+          'index': squareId,
+          'value': squareVal
         },
-        'over': data.over
+        'over': over
       }
     }
   })

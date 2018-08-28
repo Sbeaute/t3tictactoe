@@ -60,7 +60,7 @@ const addHandlers = () => {
   $('#start').on('click', oncreategame)
   $('#ongetgames').on('submit', ongetgames)
   // $('#ondeletegame').on('submit', ondeletegame)
-  // $('#onupdategame').on('submit', onupdategame)
+  $('#onupdategame').on('submit', onupdategame)
   // $('#show-board').on('click', renderBoard)
 }
 
@@ -88,10 +88,17 @@ const oncreategame = function (event) {
 const onupdategame = function (event) {
   event.preventDefault()
   console.log('update games ran')
-  const data = getFormFields(this)
+  const squareVal = $(event.target).closest('a').text()
+  console.log(squareVal)
+  const squareId = $(event.target).closest('a').attr('id')
+  console.log(squareId)
+  // const over = $(event.target).closest('a').catch('over')
+  // console.log(over)
+
+  // const data = getFormFields(this)
   console.log(event)
 
-  api.updategame(event.target.id, index, event.target.text, over)
+  api.updategames(squareVal, squareId)
     .then(ui.updategameSuccess)
     .catch(ui.updategameFailure)
 }
